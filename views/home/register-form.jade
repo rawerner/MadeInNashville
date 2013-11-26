@@ -1,0 +1,55 @@
+
+form#registerform.hidden(action='/orgs', method='post')
+  .row
+    .small-12.columns
+      h3 Tell us about you!
+  //- .row
+  //-   .small-12.columns
+  .row
+    mixin field(12, 'text', 'name', 'Your Company Name', null, autofocus=true)
+  .row
+    .small-12.columns
+      .row.collapse
+        .small-2.columns
+          span.prefix http://
+        .small-10.columns
+          input(type='text', name="website" placeholder="Company URL")
+  .row
+    mixin field(12, 'text', 'streetAddress', 'Street Address')
+  .row
+    .small-12.columns
+      select(name="city")
+        option(selected=true, value='default') Select City
+        option(value='Nashville') Nashville
+        option(value='brentwood') Brentwood
+        option(value='franklin') Franklin
+        option(value='donelson') Donelson
+
+  .row
+    .small-12.columns
+      select(name="type")
+        option(selected=true, value='default') Select Type of Organization
+        option(value='company') Company
+        option(value='cospaceIncubators') CoWorkSpace / Incubator
+        option(value='investor') Investor
+        option(value='meetup-space') MeetUp Space
+  .row
+    .small-12.columns
+      label.checkbox
+        input(type='checkbox' id='isHiring')
+        |  Is Your Company Hiring?
+  .row
+    .small-12.columns
+      .row.collapse
+        .small-2.columns
+          span.prefix http://
+        .small-10.columns
+          input(type='text', name="hiringUrl" placeholder="Hiring url")
+  .row
+    mixin field(12, 'text', 'whyNashville', 'Why is your company in Nashville?')
+    mixin field(12, 'text', 'email', 'An e-mail we can contact you at')
+  .row
+    .small-12.columns: button#register.radius.success.small.expand(type='submit') Register
+
+
+

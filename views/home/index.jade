@@ -1,0 +1,11 @@
+extends ../template/layout
+include ../mixins/form-helper
+
+block content
+  script.
+    var orgs = #{util.inspect(orgs)};
+  #map.small-9.large-9.columns
+    #map-canvas
+  #sidebar.small-3.large-3.columns
+    include register-form
+    include filters
