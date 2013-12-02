@@ -45,7 +45,7 @@ function initialize(){
   $("#addCompany").on("click", clickAddCompany);
   $("#registerform").on("submit", clickRegister);
   $("#filtersMenu li button").on("click", filterOrgs);
-  $("#backbtn").on("click", htmlHideFilters);
+  $("#backbtn").on("click", htmlHideThings);
   $("#filtersList ul").on("click",".listItem ", openOrg);
 
   createMarkers();
@@ -115,6 +115,7 @@ function createMarkers(){
 
 function createFilteredMarkers(filtered){
   clearMarkers();
+
   $( ".listItem" ).remove();
 
   for (var i = 0; i < filtered.length; i++) {
@@ -223,6 +224,10 @@ function showProfile(that){
 //         mark.infowindow.open(map,mark);
 
 // }
+function htmlHideThings(){
+  htmlHideFilters();
+  htmlHideProfile();
+}
 
 function htmlHideForm(){
   $("form#registerform input").val("");
@@ -240,7 +245,7 @@ function htmlMakeList(filtered){
       console.log(filtered[i].isHiring);
       hire = "<div class='infohiring'><a href='http://" + filtered[i].url + "' target='_blank'>Check out our jobs!</a></div>";
     } else {
-      hire = "<div class='infohiring'><a href='http://" + filtered[i].url + "' target='_blank'>Not hiring yet, but soon!</a></div>";
+      hire = "<div class='infohiring'><a href='#' target='_blank'>Not hiring yet, but soon!</a></div>";
 
       //$("div.hire").hide();
     }
