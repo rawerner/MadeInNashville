@@ -1,14 +1,20 @@
-.fixed
-  nav.top-bar
-    ul.title-area
-      li.name
-        h1: a(href="/") MADE IN NASHVILLE
-      li.toggle-topbar.menu-icon
-        a(href="#")
-          span Menu
+nav.top-bar
+  ul.title-area
+    li.name
+      #logo
+        img.logo(src="../images/flag.png")
+      #title
+        h1: a(href="/") Made-In-Nashville
 
-    section.top-bar-section
-      ul.left
-      ul.right
-        li.divider
-        li.has-form: a#addCompany.button.radius.alert(href="#") Add Your Company
+    //- li.toggle-topbar.menu-icon
+    //-   a(href="#")
+    //-     span Filter
+
+
+
+  section.top-bar-section
+    ul.left
+      li.has-form: a#addCompany.button.radius.alert(href="#") + Add Your Company
+    //- ul.right
+      //- li.divider
+      //- li.has-form: a#addCompany.button.radius.alert(href="#") + Add Your Company

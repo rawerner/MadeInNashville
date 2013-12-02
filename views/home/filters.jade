@@ -1,9 +1,12 @@
-#filtersMenu
+#filtersMenu.hidden
   ul
-    li: button.tiny.radius.expand(data-type='all') All Companies
-    li: button.tiny.radius.expand(data-type='company') Digital Companies
-    li: button.tiny.radius.expand(data-type='investor') Investors
-    li: button.tiny.radius.expand(data-type='cospaceIncubators') Coworking/Incubator Space
-    li: button.tiny.radius.expand(data-type='meetup-space') MeetUp Space
-    li: button.tiny.radius.expand(data-type='isHiring') Hiring Companies
-#filtersList
+    li: button.tiny.radius.expand.all(data-type='all') All Companies
+    li: button.tiny.radius.expand.company(data-type='company') Digital Companies
+    li: button.tiny.radius.expand.investor(data-type='investor') Investors
+    li: button.tiny.radius.expand.colab(data-type='cospaceIncubators') CoWorking / Incubator Space
+    li: button.tiny.radius.expand.meetup(data-type='meetup-space') MeetUp Space
+    li: button.tiny.radius.expand.hiring(data-type='isHiring') Hiring Companies
+#filtersList.hidden
+  ul
+
+

@@ -13,6 +13,7 @@ var Org = mongoose.Schema({
   whyNashville    : String,
   website         : String,
   hiringUrl       : String,
+  icon            : String,
   // email           : {type: String, required: true, unique: true},
   // password        : {type: String, required: true},
   // isAdmin         : {type: Boolean, default: false},

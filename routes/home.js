@@ -5,8 +5,8 @@ var util = require('util');
 
 exports.index = function(req, res){
   Org.find(function(err, orgs){
-    var orgs = _.map(orgs, function(o){
-      var data = {web:o.website, street:o.street, city:o.city, lat:o.lat, lng:o.lng, type:o.type, url:o.hiringUrl, why:o.whyNashville, isHiring:o.isHiring};
+    orgs = _.map(orgs, function(o){
+      var data = {website:o.website, street:o.street, city:o.city, lat:o.lat, lng:o.lng, type:o.type, url:o.hiringUrl, why:o.whyNashville, isHiring:o.isHiring, name:o.name, icon:o.icon};
       return data;
     });
 
